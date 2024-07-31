@@ -1,0 +1,25 @@
+{
+  "name": "api-bke-express",
+  "version": "1.0.0",
+  "description": "API Node com Framework Express",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gboorges/api-bke-express.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "zod"
+  ],
+  "author": "Giovanna Borges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gboorges/api-bke-express/issues"
+  },
+  "homepage": "https://github.com/gboorges/api-bke-express#readme"
+}
