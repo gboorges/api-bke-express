@@ -1,4 +1,4 @@
-const getAll = () => {
+export const getAll = () => {
     return [
         {
             id: 1,
