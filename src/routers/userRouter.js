@@ -8,11 +8,11 @@ import deleteUser from '../controllers/user/deleteUser.js'
 
 const router = express.Router()
 
-router.get('/', userById) // end-point que traz apenas 1 usuário
+router.get('/:id', userById) // end-point que traz apenas 1 usuário. ":id" equivale a um parâmetro de URL
 router.get('/list', userList) // end-point que traz todos os usuários
 router.post('/', createUser) // end-point que cria um novo usuário
-router.put('/', editUser) // end-point que edita várias informações de um usuário
-router.patch('/', editNameUser) // end-point que edita o nome do usuário
-router.delete('/', deleteUser) // end-point que remove um usuário
+router.put('/:id', editUser) // end-point que edita várias informações de um usuário
+router.patch('/:id', editNameUser) // end-point que edita o nome do usuário
+router.delete('/:id', deleteUser) // end-point que remove um usuário
 
 export default router
