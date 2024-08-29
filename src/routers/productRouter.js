@@ -7,10 +7,10 @@ import listProduct from '../controllers/product/listProduct.js'
 
 const router = express.Router()
 
-router.get('/', listProduct)
 router.post('/', createProduct)
-router.put('/', editProduct)
-router.patch('/', editPhotoProduct)
-router.delete('/', deleteProduct)
+router.get('/list', listProduct)
+router.put('/:id', editProduct)
+router.patch('/:id', editPhotoProduct)
+router.delete('/:id', deleteProduct)
 
 export default router

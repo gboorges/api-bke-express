@@ -14,3 +14,11 @@ export const getAll = async () => {
     })
     return products
 }
+
+export const create = async (products) => {
+    const result = await prisma.products.create({
+        data: products,
+        select
+    })
+    return result
+}
