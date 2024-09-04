@@ -1,6 +1,18 @@
 import { PrismaClient } from "@prisma/client"
+import { z } from "zod"
 
 const prisma = new PrismaClient()
+
+const userSchema = z.object({
+    id: z.number().positive(),
+    name: z.string().min(2).max(100),
+    email: z.string().email().max(200),
+    pass: z.string().min(8).max(256)
+})
+
+export const validateUser = (user) => {
+    return userSchema.safeParse(user)
+}
 
 export const getAll = async () => {
     const users = await prisma.user.findMany({
