@@ -69,7 +69,7 @@ export const create = async (user) => {
     const result = await prisma.user.create({
         data: user, // equivale à {name: user.name, email: user.email, pass: user.pass}
         select:{
-            id: true,
+            idsss: true,
             name: true,
             email: true
         }
